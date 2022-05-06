@@ -1,4 +1,4 @@
-package sellingdogs;
+package manage;
 
 public interface Management<T> {
     void display();
@@ -10,6 +10,5 @@ public interface Management<T> {
 
     void editStatus(String name);
 
-    void displayStatus(String status);
     int findByName (String name);
 }

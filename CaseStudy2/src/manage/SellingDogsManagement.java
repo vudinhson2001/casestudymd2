@@ -1,4 +1,7 @@
-package sellingdogs;
+package manage;
+
+import manage.Management;
+import sellingdogs.Dog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,6 +9,13 @@ import java.util.List;
 public class SellingDogsManagement implements Management<Dog> {
     List<Dog> sellingDogsList = new ArrayList<>();
 
+    public List<Dog> getSellingDogsList() {
+        return sellingDogsList;
+    }
+
+    public void setSellingDogsList(List<Dog> sellingDogsList) {
+        this.sellingDogsList = sellingDogsList;
+    }
 
     public SellingDogsManagement() {
 
@@ -47,18 +57,15 @@ public class SellingDogsManagement implements Management<Dog> {
     public void editStatus(String name) {
         for (int i = 0; i < sellingDogsList.size(); i++) {
             if (sellingDogsList.get(i).getName().equals(name)) {
-                if (sellingDogsList.get(i).getStatus().equals("Da Ban")) {
+                if (sellingDogsList.get(i).getStatus().equals("da ban")) {
                     System.out.println("da ban roi !!!");
                 } else {
-                    sellingDogsList.get(i).setStatus("Da Ban");
+                    sellingDogsList.get(i).setStatus("da ban");
                 }
             }
         }
     }
 
-    @Override
-    public void displayStatus(String status) {
-    }
 
     @Override
     public int findByName(String name) {

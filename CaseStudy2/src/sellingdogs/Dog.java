@@ -18,6 +18,8 @@ public class Dog {
         this.id = id;
         this.status = status;
     }
+    public Dog(Integer valueOf, String age, String s, String s1, String status) {
+    }
 
     public String getName() {
         return name;
@@ -61,12 +63,17 @@ public class Dog {
 
     @Override
     public String toString() {
-        return "Dog{" +
-                "name = '" + name + '\'' +
-                ", age = '" + age + '\'' +
-                ", price = " + price +
-                ", id = " + id +
-                ", status = " + status+
-                '}';
+        return
+                 name +
+                " ,  " + age +
+                " ,  " + price +"$"+
+                " , " + id +
+                " , " + status
+                +"\n";
     }
+
+//    public static void main(String[] args) {
+//        Dog dog = new Dog();
+//        System.out.println(dog);
+//    }
 }

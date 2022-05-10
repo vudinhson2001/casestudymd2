@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SellingDogsManagement implements Management<Dog> {
-    List<Dog> sellingDogsList = new ArrayList<>();
+    List<Dog> sellingDogsList = new ArrayList<>()       ;
 
     public List<Dog> getSellingDogsList() {
         return sellingDogsList;
@@ -37,7 +37,7 @@ public class SellingDogsManagement implements Management<Dog> {
     public void edit(String name, Dog dog) {
         int index0f = findByName(name);
         if (index0f == -1) {
-            System.out.println("khong co ten nay !!!!");
+            System.err.println("khong co ten nay !!!!");
         } else {
             sellingDogsList.set(index0f, dog);
         }
@@ -58,7 +58,7 @@ public class SellingDogsManagement implements Management<Dog> {
         for (int i = 0; i < sellingDogsList.size(); i++) {
             if (sellingDogsList.get(i).getName().equals(name)) {
                 if (sellingDogsList.get(i).getStatus().equals("da ban")) {
-                    System.out.println("da ban roi !!!");
+                    System.err.println("da ban roi !!!");
                 } else {
                     sellingDogsList.get(i).setStatus("da ban");
                 }

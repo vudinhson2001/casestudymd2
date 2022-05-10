@@ -6,7 +6,7 @@ public class Dog {
     private String age ;
     private  int price;
     private int id;
-    private String status = "het hang" ; //Còn hàng/hết hàng
+    private String status = "" ;
 
     public Dog() {
     }

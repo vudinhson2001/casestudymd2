@@ -1,24 +1,16 @@
 package manage;
 
-import manage.Management;
+
 import sellingdogs.Dog;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SellingDogsManagement implements Management<Dog> {
-    List<Dog> sellingDogsList = new ArrayList<>()       ;
+    List<Dog> sellingDogsList = new ArrayList<>();
 
     public List<Dog> getSellingDogsList() {
         return sellingDogsList;
-    }
-
-    public void setSellingDogsList(List<Dog> sellingDogsList) {
-        this.sellingDogsList = sellingDogsList;
-    }
-
-    public SellingDogsManagement() {
-
     }
 
     @Override

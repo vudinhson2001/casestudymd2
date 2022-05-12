@@ -6,8 +6,6 @@ import sellingdogs.Dog;
 import menu.Menu;
 import manage.SellingDogsManagement;
 import account.Account;
-
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -25,14 +23,14 @@ public class Main {
         int choice = 0;
         Scanner scanner = new Scanner(System.in);
         Scanner sc = new Scanner(System.in);
-        sellingDogsManagement1.add(new Dog("corgi", "6m", 60, 1, "da ban"));
-        sellingDogsManagement1.add(new Dog("husky", "7m", 70, 2, "chua ban"));
+        sellingDogsManagement1.add(new Dog("corgi", "6m", 300, 1, "da ban"));
+        sellingDogsManagement1.add(new Dog("husky", "7m", 400, 2, "chua ban"));
         sellingDogsManagement1.add(new Dog("poodle", "15m", 800, 3, "da ban"));
         sellingDogsManagement1.add(new Dog("chihuahua", "9m", 200, 4, "chua ban"));
         sellingDogsManagement1.add(new Dog("becgie", "5m", 700, 5, "chua ban"));
         sellingDogsManagement1.add(new Dog("alaska", "3m", 700, 6, "da ban"));
         sellingDogsManagement1.add(new Dog("pug", "8m", 300, 7, "chua ban"));
-        sellingDogsManagement1.add(new Dog("shiba", "12m", 1300, 8, "da ban"));
+        sellingDogsManagement1.add(new Dog("shiba", "12m", 600, 8, "da ban"));
         do {
             Menu.SellingDogsMenu();
             choice = scanner.nextInt();
@@ -53,7 +51,7 @@ public class Main {
                 System.out.println("Nhap trang thai : ");
                 String nhapStatus = scanner.nextLine();
                 String nhapStatusLower = nhapStatus.toLowerCase();
-                Dog dog = new Dog(nhapTenLower, nhapTuoiLower,  nhapGia,nhapId, nhapStatusLower);
+                Dog dog = new Dog(nhapTenLower, nhapTuoiLower, nhapGia, nhapId, nhapStatusLower);
                 sellingDogsManagement1.add(dog);
                 FileCSV.writeToFile(sellingDogsManagement1.getSellingDogsList());
             } else if (choice == 3) {
@@ -92,7 +90,7 @@ public class Main {
                 sellingDogsManagement1.remove(xoaTenLower);
             } else if (choice == 7) {
                 FileCSV.readFromFile();
-            }else if(choice ==8){
+            } else if (choice == 8) {
                 System.exit(0);
             }
         } while (choice != 0);
@@ -144,7 +142,7 @@ public class Main {
                 userName = scanner.nextLine();
                 System.out.println("NHAP MAT KHAU ");
                 passWord = scanner.nextLine();
-                if (account.getUserName().equals(userName) && account.getPassWord().equals(passWord)) {
+                if (account.getUserName().equals(userName) && account.getPassword().equals(passWord)) {
                     System.out.println("DANG NHAP THANH CONG !");
                     checkLogin = false;
                     break;

@@ -2,11 +2,11 @@ package account;
 
 public class Account {
     private String userName;
-    private String passWord;
+    private String password;
 
     public Account(String userName, String passWord) {
         this.userName = userName;
-        this.passWord = passWord;
+        this.password = passWord;
     }
 
     public String getUserName() {
@@ -17,19 +17,19 @@ public class Account {
         this.userName = userName;
     }
 
-    public String getPassWord() {
-        return passWord;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
     public String toString() {
         return "Account{" +
                 "userName='" + userName + '\'' +
-                ", passWord='" + passWord + '\'' +
+                ", passWord='" + password + '\'' +
                 '}';
     }
 }
